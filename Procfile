@@ -1,1 +1,1 @@
-web: gunicorn stesta-master.wsgi --log-file -
+web: gunicorn steer.wsgi --log-file -
