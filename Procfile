@@ -1,1 +1,1 @@
-web: gunicorn HOME.wsgi --log-file -
+web: gunicorn stesta-master.wsgi --log-file -
