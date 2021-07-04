@@ -101,14 +101,20 @@ WSGI_APPLICATION = 'steer.wsgi.application'
 # }
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'stestadb',
+    #     'USER': "adiziel",
+    #     'PASSWORD': "125478963",
+    #     'HOST': 'localhost',
+    #     'POST' : '5432',
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'stestadb',
-        'USER': "adiziel",
-        'PASSWORD': "125478963",
-        'HOST': 'localhost',
-        'POST' : '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
 }
 
 
@@ -154,7 +160,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+    # '/var/www/static/',
 ]
 
 #--
